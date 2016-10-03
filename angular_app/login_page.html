@@ -1,0 +1,17 @@
+<section>
+	<div class="container-fluid">
+	<div class="header"><h1>My Angular App</h1></div>
+	<div class="user_input col-xs-offset-2 col-xs-8 col-xs-offset-2">
+		<form ng-submit="to_login()">
+		<div><label>UserID<input type="text" class="uid"  ng-model="uname" required ng-pattern="/^\d+$/"></label>
+			<p class="watch_para" ng-bind='watch' ></p>
+		</div>
+		<div><label>Password<input type="password" class="pwd" required ng-model="paswd"></label></div>
+		<div>
+			<input type="submit" class="login" value="Login">
+			<input type="reset" class="cancel" value="Cancel">
+		</div>
+		</form>
+	</div>
+	</div>
+</section>

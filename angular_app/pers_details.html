@@ -1,0 +1,39 @@
+<section>
+	<h2 class="pers">Personal Details</h2>
+	<div class="user_org col-xs-offset-3 col-xs-8 col-xs-offset-2">
+		<form ng-submit="toSubmit()">
+		<div><label>First Name<input type="text" class="fn" ng-model="fname" required></label></div>
+		<div><label>Last Name<input type="text" class="ln" ng-model="lname"></label></div>
+		<div>
+			<label>Gender:<label class="male" >Male<input type="radio" name="gender" value="male" required></label></label>
+			<label>Female<input type="radio" name="gender" value="female"></label>
+		</div>
+
+
+		<div ng-controller="myCtrl4"><label>Date of birth<input type="date" class="dob" ng-model="bday" required></label>
+		<div><label>Mobile<input type="text" class="mob" ng-model="mobile" ng-change="mobile_fun()"></label>
+
+		</div></div>
+		
+		<input type="submit" class="submit" value="Submit">
+		<input type="reset" class="submit" value="Cancel">
+		</form>
+	</div>
+		<div class="profile"><h3 ng-click="show_profile()">Registered Users</h3></div>
+		<div ng-show="show_t"><label class="search">Search<input type="text" class="text_search" ng-model="search"></label>
+		<table class="col-xs-10 user_table">
+			<tr>
+        		<th>#</th>
+        		<th>Emp ID</th>
+        		<th>First Name</th>
+        		<th>Designation</th>
+        		<th>Location</th>
+        	</tr>
+        	<tr ng-repeat="i in details.data.employee_data | filter:search"><td>{{$index+1}}</td><td>{{i.emp_id}}</td><td>{{i.FirstName}}<td>{{i.Designation}}</td><td>{{i.Location}}</td>
+        	</tr>
+			
+		</table>
+		</div>
+		<div class="clear"></div>
+			<button class="disp" ng-click="hide()" ng-show="but">Hide</button>
+</section>

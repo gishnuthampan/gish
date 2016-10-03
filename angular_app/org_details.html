@@ -1,0 +1,16 @@
+<section>
+	<h2 class="welcome">Welcome:{{uid}}<button class="logout" ng-click="logout()">Logout</button></h2>
+	<div class="clear"></div>
+	<h2 class="org_head">Organisation Details</h2>
+	<div class="user_org col-xs-offset-3 col-xs-7 col-xs-offset-2">
+		<form ng-submit="toPersonal()">
+		<div><label>EmployeeID<input type="text" class="empID" ng-model="empID" required ng-pattern="/^\d+$/"></label></div>
+		<div><label>Company<input type="text" class="comp" ng-model="org"></label></div>
+		<div><label>Experience in years<input type="number" class="exp" ng-model="exp"></label></div>
+		<div><label>Email<input type="email" class="em" ng-model="email" required ng-pattern=" /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/"></label></div>
+		<input type="submit" class="submit" value="Next">
+		<input type="reset" class="canc" value="Cancel">
+		</form>
+	</div>
+
+</section>
